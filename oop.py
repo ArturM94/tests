@@ -17,7 +17,15 @@ class Person:
 class Runner(Person):
     def __init__(self, name, speed):
         super().__init__(name)  # inherits 'name' and 'age' attributes from parent class Person
-        self.speed = speed
+        self.__speed = speed  # private attribute
+
+    @property
+    def speed(self):
+        return self.__speed
+
+    @speed.setter
+    def speed(self, speed):
+        self.__speed = speed
 
     def walk(self):  # redefined method
         return f'{self.name} is walking to stadium'
