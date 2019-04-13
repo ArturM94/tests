@@ -7,3 +7,7 @@ print(lambda_mapped_array)
 
 lambda_list_comprehension_array = [(lambda index: 0 if index % 2 == 0 else 1)(index) for index in indexes]
 print(lambda_list_comprehension_array)
+
+# bad way (PEP 8)
+lambda_array = lambda indexes: [0 if index % 2 == 0 else 1 for index in indexes]
+print(lambda_array(indexes))
