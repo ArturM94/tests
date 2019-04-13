@@ -30,3 +30,7 @@ print(person.walk())
 runner = Runner('John', 21, 15)
 print(runner.walk())  # redefined method with the same name but another implementation (polymorphism)
 print(runner.run())
+
+driver = Driver('Andrew', 28)  # driver instance inherits constructor method from Person class
+print(driver.walk())  # driver instance inherits walk() method from Person class
+print(driver.drive())
