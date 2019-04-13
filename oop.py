@@ -1,9 +1,17 @@
 class Person:
     def __init__(self, name):
-        self.name = name
+        self._name = name  # protected attribute
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        self._name = name
 
     def walk(self):
-        return f'{self.name} is walking'
+        return f'{self._name} is walking'
 
 
 class Runner(Person):
@@ -12,15 +20,15 @@ class Runner(Person):
         self.speed = speed
 
     def walk(self):  # redefined method
-        return f'{self.name} is walking to stadium'
+        return f'{self._name} is walking to stadium'
 
     def run(self):  # own unique method
-        return f'{self.name} is running with speed {self.speed} km/h'
+        return f'{self._name} is running with speed {self.speed} km/h'
 
 
 class Driver(Person):
     def drive(self):  # own unique method
-        return f'{self.name} is driving'
+        return f'{self._name} is driving'
 
 
 person = Person('Person')
