@@ -17,3 +17,7 @@ class Runner(Person):
 
     def run(self):  # own unique method
         return f'{self.name} is running with speed {self.speed} km/h'
+
+
+person = Person('Person', 30)
+print(person.walk())
