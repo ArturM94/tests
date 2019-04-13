@@ -21,3 +21,7 @@ class Runner(Person):
 
 person = Person('Person', 30)
 print(person.walk())
+
+runner = Runner('John', 21, 15)
+print(runner.walk())  # redefined method with the same name but another implementation (polymorphism)
+print(runner.run())
