@@ -11,7 +11,7 @@ class Person:
         self._name = name
 
     def walk(self):
-        return f'{self._name} is walking'
+        return f'{self.name} is walking'
 
 
 class Runner(Person):
@@ -20,15 +20,15 @@ class Runner(Person):
         self.speed = speed
 
     def walk(self):  # redefined method
-        return f'{self._name} is walking to stadium'
+        return f'{self.name} is walking to stadium'
 
     def run(self):  # own unique method
-        return f'{self._name} is running with speed {self.speed} km/h'
+        return f'{self.name} is running with speed {self.speed} km/h'
 
 
 class Driver(Person):
     def drive(self):  # own unique method
-        return f'{self._name} is driving'
+        return f'{self.name} is driving'
 
 
 person = Person('Person')
