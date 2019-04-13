@@ -11,3 +11,8 @@ print(lambda_list_comprehension_array)
 # bad way (PEP 8)
 lambda_array = lambda indexes: [0 if index % 2 == 0 else 1 for index in indexes]
 print(lambda_array(indexes))
+
+lambda_cycled_array = []
+for index in indexes:
+    lambda_cycled_array.append((lambda index: 0 if index % 2 == 0 else 1)(index))
+print(lambda_cycled_array)
