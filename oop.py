@@ -1,15 +1,14 @@
 class Person:
-    def __init__(self, name, age):
+    def __init__(self, name):
         self.name = name
-        self.age = age
 
     def walk(self):
         return f'{self.name} is walking'
 
 
 class Runner(Person):
-    def __init__(self, name, age, speed):
-        super().__init__(name, age)  # inherits 'name' and 'age' attributes from parent class Person
+    def __init__(self, name, speed):
+        super().__init__(name)  # inherits 'name' and 'age' attributes from parent class Person
         self.speed = speed
 
     def walk(self):  # redefined method
@@ -24,13 +23,13 @@ class Driver(Person):
         return f'{self.name} is driving'
 
 
-person = Person('Person', 30)
+person = Person('Person')
 print(person.walk())
 
-runner = Runner('John', 21, 15)
+runner = Runner('John', 15)
 print(runner.walk())  # redefined method with the same name but another implementation (polymorphism)
 print(runner.run())
 
-driver = Driver('Andrew', 28)  # driver instance inherits constructor method from Person class
+driver = Driver('Andrew')  # driver instance inherits constructor method from Person class
 print(driver.walk())  # driver instance inherits walk() method from Person class
 print(driver.drive())
