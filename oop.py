@@ -20,12 +20,8 @@ class Runner(Person):
 
 
 class Driver(Person):
-    def __init__(self, name, age, driver_license):
-        super().__init__(name, age)
-        self.driver_license = driver_license
-
     def drive(self):  # own unique method
-        return f'{self.name} is driving with driver license №{self.driver_license}'
+        return f'{self.name} is driving'
 
 
 person = Person('Person', 30)
